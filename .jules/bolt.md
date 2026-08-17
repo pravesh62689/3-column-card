@@ -1,0 +1,3 @@
+## 2024-05-24 - Optimize Font Loading Strategy
+**Learning:** Found an anti-pattern in the codebase where Google Fonts were being loaded via `@import` multiple times inside external stylesheets (like `style.css` and `mediastyle.css`). This blocks parallel CSS downloads and creates a sequential dependency (HTML -> CSS -> Fonts) which slows down first paint significantly.
+**Action:** Always prefer using `<link rel="stylesheet">` alongside `<link rel="preconnect">` inside the HTML `<head>` rather than using `@import` inside CSS files.
