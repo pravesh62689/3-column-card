@@ -1,0 +1,3 @@
+## 2024-05-24 - Preconnecting external resources
+**Learning:** Loading web fonts via `@import` inside a CSS file is a performance anti-pattern. It delays the font request until the CSS file is fully downloaded and parsed. The browser discovers and loads the fonts much faster if `<link rel="preconnect">` and `<link rel="stylesheet">` tags are placed directly in the `<head>` of the HTML file. Additionally, `style.css` contained a duplicated `@import` which was completely unnecessary.
+**Action:** Always prefer `<link>` over `@import` for fonts and use `preconnect` hints to improve the Critical Rendering Path.
