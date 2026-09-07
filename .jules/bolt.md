@@ -1,0 +1,3 @@
+## 2026-09-07 - [Frontend Font Loading Anti-pattern]
+**Learning:** Found multiple duplicate `@import` statements for the same Google Fonts in separate CSS files (`style.css` and `mediastyle.css`). This causes severe render blocking as the browser halts rendering to fetch, parse, and block on these CSS imports serially.
+**Action:** Always load essential third-party fonts via `<link rel="preconnect">` and `<link rel="stylesheet">` tags in the HTML `<head>` instead of using CSS `@import`. Avoid duplicating these requests across multiple stylesheets.
