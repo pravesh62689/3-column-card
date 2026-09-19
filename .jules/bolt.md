@@ -1,0 +1,3 @@
+## 2026-09-19 - Removed render-blocking @import for fonts
+**Learning:** This codebase loaded Google Fonts using redundant `@import` statements inside `style.css`. This is a classic anti-pattern that blocks the browser's CSS parser, delaying First Contentful Paint (FCP). It requires the browser to first download and parse `style.css` before it even knows it needs to download the fonts.
+**Action:** Replaced `@import` in `style.css` with `<link>` tags in the `<head>` of `index.html`. Added `preconnect` hints for `fonts.googleapis.com` and `fonts.gstatic.com` to establish early connections, significantly improving font load times and time to interactive.
