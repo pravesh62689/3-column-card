@@ -1,0 +1,3 @@
+## 2024-06-25 - CSS @import Font Loading Anti-Pattern
+**Learning:** Found multiple instances of duplicate `@import` rules for Google Fonts directly inside CSS files (`style.css` and `mediastyle.css`). This is a critical performance bottleneck because `@import` inside CSS forces the browser to serialize requests (HTML -> CSS -> Fonts), blocking the main thread from discovering the fonts until the CSS is fully parsed.
+**Action:** Always replace CSS `@import` rules for fonts with HTML `<link rel="stylesheet">` tags in the document `<head>`, and include `<link rel="preconnect">` hints to unblock rendering and resolve DNS/TLS early.
