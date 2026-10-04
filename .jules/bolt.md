@@ -1,0 +1,1 @@
+## 2024-05-24 - Preload Google Fonts instead of @import\n**Learning:** The static CSS file relied on multiple duplicate `@import` statements for Google Fonts, blocking the main thread from discovering them early.\n**Action:** Use `<link rel="preconnect">` and `<link rel="stylesheet">` in the HTML `<head>` for faster font loading.
