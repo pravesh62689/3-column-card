@@ -8,6 +8,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <!-- Bolt: Font loading optimization. Preconnecting to the Google Fonts origins and
+       using a <link> tag instead of @import inside CSS prevents the CSS parser from blocking,
+       eliminates waterfall loading delays, and improves First Contentful Paint (FCP). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
   <title>Frontend Mentor | 3-column preview card component</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" media="screen and (max-width:876px)" href="mediastyle.css">
