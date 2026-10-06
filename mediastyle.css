@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-
 body{
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 .con{
@@ -13,7 +10,7 @@ body{
 }
 
 h1{
-    font-family: 'Big Shoulders Display', cursive;  
+    font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
     color:  hsl(0, 0%, 95%);
 }
@@ -37,13 +34,13 @@ p{
 
 .first-container{
     width: 288px;
-    border-radius: 10px 10px 0 0px; 
+    border-radius: 10px 10px 0 0px;
 }
 .second-container{
     width: 288px;
 }
 .third-container{
     width: 288px;
-    border-radius: 0px 0px 10px 10px; 
+    border-radius: 0px 0px 10px 10px;
     margin-bottom: 150px;
 }
