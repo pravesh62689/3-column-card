@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-
+/* ⚡ Bolt: Removed blocking @import for fonts, moved to <link> in index.html for faster parallel loading */
 body{
     margin: 0;
     padding: 0;    
