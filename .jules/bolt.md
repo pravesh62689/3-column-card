@@ -1,0 +1,3 @@
+## 2024-05-18 - Optimized Font Loading by Replacing CSS @import with HTML <link>
+**Learning:** Found an anti-pattern of duplicate `@import` statements for Google Fonts in both `style.css` and `mediastyle.css`. The `@import` directive blocks parallel downloads because the browser must parse the CSS first.
+**Action:** Always prefer `<link rel="preconnect">` and `<link rel="stylesheet">` in the HTML `<head>` over `@import` in CSS files to improve critical rendering path and resource loading concurrency. Also be aware that replacing files with python scripts can normalize CRLF to LF line endings, changing the entire file in the git diff.
