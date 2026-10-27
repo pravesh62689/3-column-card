@@ -1,0 +1,3 @@
+## 2026-10-27 - [Font Import Anti-Pattern]
+**Learning:** Found a performance bottleneck specific to this codebase: multiple CSS files (`style.css` and `mediastyle.css`) were duplicating `@import` statements for the same Google Fonts. This forces the browser to wait for the CSS to parse before it can even start downloading the fonts, and duplicating it across files exacerbates the issue.
+**Action:** Replaced CSS `@import` statements with HTML `<link rel="preconnect">` and `<link rel="stylesheet">` tags in `index.html`. This allows parallel downloading of fonts and stylesheets, significantly reducing the critical rendering path time.
