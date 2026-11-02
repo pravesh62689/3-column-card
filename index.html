@@ -13,6 +13,12 @@
   <link rel="stylesheet" media="screen and (max-width:876px)" href="mediastyle.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
+
+  <!-- Bolt: Moved fonts from CSS @import to HTML <link> for parallel loading -->
+  <!-- Expected impact: Faster First Contentful Paint by removing CSS render blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
 
 <body>
