@@ -1,0 +1,3 @@
+## 2024-11-02 - CSS @import Anti-pattern
+**Learning:** Found Google Fonts being loaded via `@import` at the top of CSS files, duplicated across both `style.css` and `mediastyle.css`. This is a common anti-pattern that blocks rendering because the browser has to wait to download and parse the CSS file before it even discovers it needs to download the fonts.
+**Action:** Always move web font loading out of CSS `@import` rules and into the HTML `<head>` using `<link rel="preconnect">` and `<link rel="stylesheet">`. This allows the browser to discover and download the fonts in parallel with the CSS, significantly improving First Contentful Paint (FCP).
