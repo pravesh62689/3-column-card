@@ -1,0 +1,3 @@
+## 2024-05-24 - [Avoid CSS @import for Web Fonts]
+**Learning:** Found multiple instances of `@import url(...)` being used across different CSS files (`style.css` and `mediastyle.css`) to load the same Google Fonts. This is a common performance anti-pattern because `@import` statements block the browser from downloading other assets in parallel (chained requests) and duplicated `@import`s can cause the same font to be downloaded multiple times if the browser's cache isn't hit optimally.
+**Action:** Always prefer using `<link rel="stylesheet">` with `preconnect` in the HTML `<head>` instead of `@import` in CSS files for web fonts to enable parallel downloading and faster rendering.
